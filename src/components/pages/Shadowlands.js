@@ -1,64 +1,70 @@
-import React from "react";
+import React, { useState } from "react";
 import './Shadowlands.css';
 import Col from '../../utils/Col';
 import Row from '../../utils/Row';
+import questionMark from '../../images/icons/inv_misc_questionmark.jpg';
+
+const imageWidth = '40px';
 
 function Shadowlands({ }) {
   // TODO class picker
+  const [currentClass, setCurrentClass] = useState('Warrior');
 
-  // TODO Tiers of talent rows
+  // Tiers of talent rows
   const talentPane = () => {
     return <div>
       <div className="row">
-        <div className="col levelColumn">15</div>
-        <div className="col talentChoice">1-1</div>
-        <div className="col talentChoice">1-2</div>
-        <div className="col talentChoice">1-3</div>
+        <div className="col levelColumn"><h3>15</h3></div>
+        <div className="col talentChoice"><img src={questionMark} alt="?" width={imageWidth}></img><h4>1-1</h4></div>
+        <div className="col talentChoice"><img src={questionMark} alt="?" width={imageWidth}></img><h4>1-2</h4></div>
+        <div className="col talentChoice"><img src={questionMark} alt="?" width={imageWidth}></img><h4>1-3</h4></div>
       </div>
       <div className="row">
-        <div className="col levelColumn">25</div>
-        <div className="col talentChoice">2-1</div>
-        <div className="col talentChoice">2-2</div>
-        <div className="col talentChoice">2-3</div>
+        <div className="col levelColumn"><h3>25</h3></div>
+        <div className="col talentChoice"><img src={questionMark} alt="?" width={imageWidth}></img><h4>2-1</h4></div>
+        <div className="col talentChoice"><img src={questionMark} alt="?" width={imageWidth}></img><h4>2-2</h4></div>
+        <div className="col talentChoice"><img src={questionMark} alt="?" width={imageWidth}></img><h4>2-3</h4></div>
       </div>
       <div className="row">
-        <div className="col levelColumn">30</div>
-        <div className="col talentChoice">3-1</div>
-        <div className="col talentChoice">3-2</div>
-        <div className="col talentChoice">3-3</div>
+        <div className="col levelColumn"><h3>30</h3></div>
+        <div className="col talentChoice"><img src={questionMark} alt="?" width={imageWidth}></img><h4>3-1</h4></div>
+        <div className="col talentChoice"><img src={questionMark} alt="?" width={imageWidth}></img><h4>3-2</h4></div>
+        <div className="col talentChoice"><img src={questionMark} alt="?" width={imageWidth}></img><h4>3-3</h4></div>
       </div>
       <div className="row">
-        <div className="col levelColumn">35</div>
-        <div className="col talentChoice">4-1</div>
-        <div className="col talentChoice">4-2</div>
-        <div className="col talentChoice">4-3</div>
+        <div className="col levelColumn"><h3>35</h3></div>
+        <div className="col talentChoice"><img src={questionMark} alt="?" width={imageWidth}></img><h4>4-1</h4></div>
+        <div className="col talentChoice"><img src={questionMark} alt="?" width={imageWidth}></img><h4>4-2</h4></div>
+        <div className="col talentChoice"><img src={questionMark} alt="?" width={imageWidth}></img><h4>4-3</h4></div>
       </div>
       <div className="row">
-        <div className="col levelColumn">40</div>
-        <div className="col talentChoice">5-1</div>
-        <div className="col talentChoice">5-2</div>
-        <div className="col talentChoice">5-3</div>
+        <div className="col levelColumn"><h3>40</h3></div>
+        <div className="col talentChoice"><img src={questionMark} alt="?" width={imageWidth}></img><h4>5-1</h4></div>
+        <div className="col talentChoice"><img src={questionMark} alt="?" width={imageWidth}></img><h4>5-2</h4></div>
+        <div className="col talentChoice"><img src={questionMark} alt="?" width={imageWidth}></img><h4>5-3</h4></div>
       </div>
       <div className="row">
-        <div className="col levelColumn">45</div>
-        <div className="col talentChoice">6-1</div>
-        <div className="col talentChoice">6-2</div>
-        <div className="col talentChoice">6-3</div>
+        <div className="col levelColumn"><h3>45</h3></div>
+        <div className="col talentChoice"><img src={questionMark} alt="?" width={imageWidth}></img><h4>6-1</h4></div>
+        <div className="col talentChoice"><img src={questionMark} alt="?" width={imageWidth}></img><h4>6-2</h4></div>
+        <div className="col talentChoice"><img src={questionMark} alt="?" width={imageWidth}></img><h4>6-3</h4></div>
       </div>
       <div className="row">
-        <div className="col levelColumn">50</div>
-        <div className="col talentChoice">7-1</div>
-        <div className="col talentChoice">7-2</div>
-        <div className="col talentChoice">7-3</div>
+        <div className="col levelColumn"><h3>50</h3></div>
+        <div className="col talentChoice"><img src={questionMark} alt="?" width={imageWidth}></img><h4>7-1</h4></div>
+        <div className="col talentChoice"><img src={questionMark} alt="?" width={imageWidth}></img><h4>7-2</h4></div>
+        <div className="col talentChoice"><img src={questionMark} alt="?" width={imageWidth}></img><h4>7-3</h4></div>
       </div>
     </div>
   }
 
   return (
-    <div className="row">
-      <h1>Shadowlands Talents</h1>
-      {talentPane()}
-    </div>
+    <>
+      <h1>{currentClass}</h1>
+      <div className="row talentFrame">
+        {talentPane()}
+      </div>
+    </>
   )
 }
 

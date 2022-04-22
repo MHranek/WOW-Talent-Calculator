@@ -4,9 +4,16 @@
   background-color: gray;
   flex-grow: 5;
   height: 50px;
-  align-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  display: flex;
 }
 
 .levelColumn {
   width: 30px;
+  text-align: center;
+}
+
+.talentFrame {
+  flex-basis: 1000px;
 }
