@@ -12,6 +12,18 @@ function Navigate({ currentPage, handlePageChange }) {
       href="#Dragonflight"
       onClick={() => handlePageChange('Dragonflight')}
       className="btn-">Dragonflight</button>
+      <button 
+      href="#TBC"
+      onClick={() => handlePageChange('TBC')}
+      className="btn-">TBC</button>
+      <button 
+      href="#WOTLK"
+      onClick={() => handlePageChange('WOTLK')}
+      className="btn-">WOTLK</button>
+      <button 
+      href="#Shadowlands"
+      onClick={() => handlePageChange('Shadowlands')}
+      className="btn-">Shadowlands</button>
     </nav>
   )
 }

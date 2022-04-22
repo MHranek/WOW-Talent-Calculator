@@ -4,6 +4,9 @@ import './App.css';
 import Navigate from './components/Navigate';
 import Home from './components/pages/Home';
 import Dragonflight from './components/pages/Dragonflight';
+import TBC from './components/pages/TBC';
+import Shadowlands from './components/pages/Shadowlands';
+import WOTLK from './components/pages/WOTLK';
 import Col from './utils/Col';
 import Row from './utils/Row';
 
@@ -16,6 +19,15 @@ function App() {
     }
     if (currentPage === 'Dragonflight') {
       return <Dragonflight />;
+    }
+    if (currentPage === 'TBC') {
+      return <TBC />;
+    }
+    if (currentPage === 'Shadowlands') {
+      return <Shadowlands />;
+    }
+    if (currentPage === 'WOTLK') {
+      return <WOTLK />;
     }
   }
 
