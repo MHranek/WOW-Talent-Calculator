@@ -1,0 +1,12 @@
+.talentChoice {
+  border: 2px solid black;
+  margin: 2px;
+  background-color: gray;
+  flex-grow: 5;
+  height: 50px;
+  align-content: center;
+}
+
+.levelColumn {
+  width: 30px;
+}
