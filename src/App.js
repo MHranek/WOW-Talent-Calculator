@@ -37,7 +37,7 @@ function App() {
     <div className="App">
       <Navigate currentPage={currentPage} handlePageChange={handlePageChange} />
       <header className="App-header">
-        <Col size="md-6">
+        <Col size="md-10">
           {renderPage()}
         </Col>
       </header>

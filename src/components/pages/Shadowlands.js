@@ -5,10 +5,30 @@ import Row from '../../utils/Row';
 import questionMark from '../../images/icons/inv_misc_questionmark.jpg';
 
 const imageWidth = '40px';
+const specAbilities = [
+  {
+    specName: 'Arms',
+    className: 'Warrior',
+    11: 'arms 1',
+    12: 'arms 2'
+  }
+]
 
 function Shadowlands({ }) {
   // TODO class picker
-  const [currentClass, setCurrentClass] = useState('Warrior');
+  const [currentSpec, setCurrentSpec] = useState('Arms');
+
+  // Spec Picker
+  const specChoice = () => {
+    let specButtons = '';
+    // Build buttons to swap between specs based on specAbilities array
+    for (var i = 0; i < specAbilities.length; i++) {
+      specButtons = specButtons + `<img onClick={() => setCurrentSpec('${specAbilities[i].specName}')} src={questionMark} alt='${specAbilities[i].specName}' width={imageWidth}></img><br>`;
+    }
+    console.log(specButtons);
+    // document.querySelector('.spec-choices').innerHTML = specButtons;
+    return (specButtons);
+  }
 
   // Tiers of talent rows
   const talentPane = () => {
@@ -60,7 +80,18 @@ function Shadowlands({ }) {
 
   return (
     <>
-      <h1>{currentClass}</h1>
+      <div className="spec-choices">
+        {specChoice()}
+        <img onClick={() => setCurrentSpec('Arms')} src={questionMark} alt="Arms" width={imageWidth}></img>
+        <img onClick={() => setCurrentSpec('Fury')} src={questionMark} alt="Fury" width={imageWidth}></img>
+        <img onClick={() => setCurrentSpec('Prot')} src={questionMark} alt="Prot" width={imageWidth}></img>
+        <img onClick={() => setCurrentSpec('Arms')} src={questionMark} alt="?" width={imageWidth}></img>
+        <img onClick={() => setCurrentSpec('Arms')} src={questionMark} alt="?" width={imageWidth}></img>
+        <img onClick={() => setCurrentSpec('Arms')} src={questionMark} alt="?" width={imageWidth}></img>
+        <img onClick={() => setCurrentSpec('Arms')} src={questionMark} alt="?" width={imageWidth}></img>
+        <img onClick={() => setCurrentSpec('Arms')} src={questionMark} alt="?" width={imageWidth}></img>
+      </div>
+      <h1>{currentSpec}</h1>
       <div className="row talentFrame">
         {talentPane()}
       </div>
