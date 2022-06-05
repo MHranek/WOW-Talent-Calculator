@@ -1,0 +1,132 @@
+.talentContainer {
+  display: flex;
+  flex: 1 1 calc(50% - 32px);
+  box-sizing: border-box;
+  min-width: calc(50% - 32px);
+  margin-right: 32px;
+  flex-direction: column;
+}
+
+.talentTreeTitle {
+  padding-bottom: 40px;
+}
+
+.talentTreeBorder {
+  border: 2px solid gray;
+  border-radius: 10px;
+  padding: 15px 0px;
+}
+
+.talentTreeOptions {
+  width: 80%;
+  position: relative;
+  height: 1000px;
+  margin: 0 auto;
+}
+
+.talentChoice {
+  width: 50px;
+  position: absolute;
+  padding: 0 14px;
+  transform: translate(-50%, -50%);
+}
+
+.talentIcon {
+  display: block;
+  width: 40px;
+  height: auto;
+  border: 2px solid gray;
+  border-radius: 4px;
+  opacity: .4;
+}
+
+.talentTooltip {
+  position: absolute;
+  width: 300px;
+  height: max-content;
+  background-color: black;
+  bottom: 120%;
+  visibility: hidden;
+  text-align: center;
+  z-index: 1;
+  padding: 0;
+}
+
+.talentChoice:hover .talentTooltip {
+  visibility: visible;
+}
+
+.talentTooltipName {
+  margin-bottom: 3px;
+  font-size: 36px;
+}
+
+.talentTooltipDescription {
+  margin-bottom: 3px;
+  font-size: 22px;
+}
+.talentTooltipSpecial {
+  color: rgb(35, 75, 255);
+  margin-bottom: 3px;
+  font-size: 22px;
+}
+
+.y-0 {
+  top: 0%;
+}
+.y-1 {
+  top: 11%;
+}
+.y-2 {
+  top: 22%;
+}
+.y-3 {
+  top: 33%;
+}
+.y-4 {
+  top: 44%;
+}
+.y-5 {
+  top: 55%;
+}
+.y-6 {
+  top: 66%;
+}
+.y-7 {
+  top: 77%;
+}
+.y-8 {
+  top: 88%;
+}
+.y-9 {
+  top: 100%;
+}
+
+.x-0 {
+  left: 0%;
+}
+.x-1 {
+  left: 12%;
+}
+.x-2 {
+  left: 24%;
+}
+.x-3 {
+  left: 36%;
+}
+.x-4 {
+  left: 48%;
+}
+.x-5 {
+  left: 60%;
+}
+.x-6 {
+  left: 72%;
+}
+.x-7 {
+  left: 84%;
+}
+.x-8 {
+  left: 100%;
+}
+

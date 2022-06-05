@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+import './Dragonflight.css';
 import Col from '../../utils/Col';
 import Row from '../../utils/Row';
 import questionMark from '../../images/icons/inv_misc_questionmark.jpg';
 
-function Dragonflight({}) {
+function Dragonflight({ }) {
   const [currentClass, setCurrentClass] = useState('Druid');
   const [currentSpec, setCurrentSpec] = useState('Feral');
   let currentSelectedClassPoints = [];
@@ -44,9 +45,94 @@ function Dragonflight({}) {
     switch (currentClass) {
       case 'Druid':
         return (
-          <div className="talentTreeOptions">
-            <div></div>
-          </div>
+          <>
+            <div className="talentTreeTitle">
+              <h1>Druid Tree</h1>
+              <h3>31 Points Remaining</h3>
+            </div>
+            <div className="talentTreeOptions">
+              <div className="talentChoice y-0 x-1">
+                <div className="talentBox">
+                  <img className='talentIcon' alt='talent img' src={questionMark}></img>
+                </div>
+                <div className="talentTooltip talentTreeBorder">
+                  <p className="talentTooltipName">Talent Name</p>
+                  <p className="talentTooltipDescription">Talent Description</p>
+                  <p className="talentTooltipSpecial">Special Note</p>
+                </div>
+              </div>
+              <div className="talentChoice y-0 x-3">
+                <div className="talentBox">
+                  <img className='talentIcon' alt='talent img' src={questionMark}></img>
+                </div>
+                <div className="talentTooltip talentTreeBorder">
+                  <p className="talentTooltipName">Talent Name</p>
+                  <p className="talentTooltipDescription">Talent Description</p>
+                  <p className="talentTooltipSpecial">Special Note</p>
+                </div>
+              </div>
+              <div className="talentChoice y-0 x-5">
+                <div className="talentBox">
+                  <img className='talentIcon' alt='talent img' src={questionMark}></img>
+                </div>
+                <div className="talentTooltip talentTreeBorder">
+                  <p className="talentTooltipName">Talent Name</p>
+                  <p className="talentTooltipDescription">Talent Description</p>
+                  <p className="talentTooltipSpecial">Special Note</p>
+                </div>
+              </div>
+              <div className="talentChoice y-0 x-7">
+                <div className="talentBox">
+                  <img className='talentIcon' alt='talent img' src={questionMark}></img>
+                </div>
+                <div className="talentTooltip talentTreeBorder">
+                  <p className="talentTooltipName">Talent Name</p>
+                  <p className="talentTooltipDescription">Talent Description</p>
+                  <p className="talentTooltipSpecial">Special Note</p>
+                </div>
+              </div>
+              <div className="talentChoice y-1 x-2">
+                <div className="talentBox">
+                  <img className='talentIcon' alt='talent img' src={questionMark}></img>
+                </div>
+                <div className="talentTooltip talentTreeBorder">
+                  <p className="talentTooltipName">Talent Name</p>
+                  <p className="talentTooltipDescription">Talent Description</p>
+                  <p className="talentTooltipSpecial">Special Note</p>
+                </div>
+              </div>
+              <div className="talentChoice y-1 x-4">
+                <div className="talentBox">
+                  <img className='talentIcon' alt='talent img' src={questionMark}></img>
+                </div>
+                <div className="talentTooltip talentTreeBorder">
+                  <p className="talentTooltipName">Talent Name</p>
+                  <p className="talentTooltipDescription">Talent Description</p>
+                  <p className="talentTooltipSpecial">Special Note</p>
+                </div>
+              </div>
+              <div className="talentChoice y-1 x-5">
+                <div className="talentBox">
+                  <img className='talentIcon' alt='talent img' src={questionMark}></img>
+                </div>
+                <div className="talentTooltip talentTreeBorder">
+                  <p className="talentTooltipName">Talent Name</p>
+                  <p className="talentTooltipDescription">Talent Description</p>
+                  <p className="talentTooltipSpecial">Special Note</p>
+                </div>
+              </div>
+              <div className="talentChoice y-1 x-7">
+                <div className="talentBox">
+                  <img className='talentIcon' alt='talent img' src={questionMark}></img>
+                </div>
+                <div className="talentTooltip talentTreeBorder">
+                  <p className="talentTooltipName">Talent Name</p>
+                  <p className="talentTooltipDescription">Talent Description</p>
+                  <p className="talentTooltipSpecial">Special Note</p>
+                </div>
+              </div>
+            </div>
+          </>
         )
       case 'DeathKnight':
         return (
@@ -95,14 +181,14 @@ function Dragonflight({}) {
   return (
     <div>
       <div className="classlist">
-        <button onClick={() => {setCurrentClass('Druid'); setCurrentSpec('Feral')}} className="Druid class-btn">Druid</button>
-        <button onClick={() => {setCurrentClass('DeathKnight'); setCurrentSpec('Blood')}} className="Death-Knight class-btn">Death Knight</button>
+        <button onClick={() => { setCurrentClass('Druid'); setCurrentSpec('Feral') }} className="Druid class-btn">Druid</button>
+        <button onClick={() => { setCurrentClass('DeathKnight'); setCurrentSpec('Blood') }} className="Death-Knight class-btn">Death Knight</button>
       </div>
       {getSelectedSpecOptions()}
       <Row>
-        <Col size="md-6">
+        <div className="col-md-6 talentContainer talentTreeBorder">
           {getClassTalentSelector()}
-        </Col>
+        </div>
         <Col size="md-6">
           {getSpecTalentSelector()}
         </Col>
