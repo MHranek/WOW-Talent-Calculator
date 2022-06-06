@@ -5,6 +5,15 @@ import Row from '../../utils/Row';
 import questionMark from '../../images/icons/inv_misc_questionmark.jpg';
 import druidTest from '../../images/druidClassTree.png';
 
+// const talentTreeClicks = document.querySelectorAll('talentChoice');
+
+// talentTreeClicks.addEventListener('click', (e) => {
+//   // add selected class to clicked icon
+//   console.log('test');
+//   const target = e.target;
+//   target.classList.add('selected');
+// })
+
 function Dragonflight({ }) {
   const [currentClass, setCurrentClass] = useState('Druid');
   const [currentSpec, setCurrentSpec] = useState('Feral');
@@ -53,7 +62,7 @@ function Dragonflight({ }) {
             </div>
             <div className="talentTreeOptions">
               <img className="talentTreePathGraphic" alt="Druid Lines" src={druidTest}></img>
-              <div className="talentChoice y-0 x-1">
+              <div className="talentChoice selected y-0 x-1">
                 <div className="talentBox">
                   <img className='talentIcon' alt='talent img' src={questionMark}></img>
                 </div>
