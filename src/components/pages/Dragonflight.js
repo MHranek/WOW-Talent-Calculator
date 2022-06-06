@@ -3,6 +3,7 @@ import './Dragonflight.css';
 import Col from '../../utils/Col';
 import Row from '../../utils/Row';
 import questionMark from '../../images/icons/inv_misc_questionmark.jpg';
+import druidTest from '../../images/druidClassTree.png';
 
 function Dragonflight({ }) {
   const [currentClass, setCurrentClass] = useState('Druid');
@@ -51,6 +52,7 @@ function Dragonflight({ }) {
               <h3>31 Points Remaining</h3>
             </div>
             <div className="talentTreeOptions">
+              <img className="talentTreePathGraphic" alt="Druid Lines" src={druidTest}></img>
               <div className="talentChoice y-0 x-1">
                 <div className="talentBox">
                   <img className='talentIcon' alt='talent img' src={questionMark}></img>
@@ -101,9 +103,9 @@ function Dragonflight({ }) {
                   <p className="talentTooltipSpecial">Special Note</p>
                 </div>
               </div>
-              <div className="talentChoice y-1 x-4">
+              <div className="talentChoice talentPassive y-1 x-4">
                 <div className="talentBox">
-                  <img className='talentIcon' alt='talent img' src={questionMark}></img>
+                  <img className='talentIcon talentPassive' alt='talent img' src={questionMark}></img>
                 </div>
                 <div className="talentTooltip talentTreeBorder">
                   <p className="talentTooltipName">Talent Name</p>

@@ -5,6 +5,7 @@
   min-width: calc(50% - 32px);
   margin-right: 32px;
   flex-direction: column;
+  padding-bottom: 40px;
 }
 
 .talentTreeTitle {
@@ -20,15 +21,14 @@
 .talentTreeOptions {
   width: 80%;
   position: relative;
-  height: 1000px;
   margin: 0 auto;
 }
 
 .talentChoice {
-  width: 50px;
   position: absolute;
-  padding: 0 14px;
   transform: translate(-50%, -50%);
+  background-color: #282c34;
+  z-index: 2;
 }
 
 .talentIcon {
@@ -38,6 +38,11 @@
   border: 2px solid gray;
   border-radius: 4px;
   opacity: .4;
+  z-index: inherit;
+}
+
+.talentPassive {
+  border-radius: 20px;
 }
 
 .talentTooltip {
@@ -46,9 +51,10 @@
   height: max-content;
   background-color: black;
   bottom: 120%;
+  left: -120px;
   visibility: hidden;
   text-align: center;
-  z-index: 1;
+  z-index: 3;
   padding: 0;
 }
 
@@ -69,6 +75,15 @@
   color: rgb(35, 75, 255);
   margin-bottom: 3px;
   font-size: 22px;
+}
+
+.talentTreePathGraphic {
+  display: block;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  position: relative;
+  opacity: .8;
 }
 
 .y-0 {
@@ -106,25 +121,25 @@
   left: 0%;
 }
 .x-1 {
-  left: 12%;
+  left: 12.5%;
 }
 .x-2 {
-  left: 24%;
+  left: 25%;
 }
 .x-3 {
-  left: 36%;
+  left: 37.5%;
 }
 .x-4 {
-  left: 48%;
+  left: 50%;
 }
 .x-5 {
-  left: 60%;
+  left: 62.5%;
 }
 .x-6 {
-  left: 72%;
+  left: 75%;
 }
 .x-7 {
-  left: 84%;
+  left: 87.5%;
 }
 .x-8 {
   left: 100%;
